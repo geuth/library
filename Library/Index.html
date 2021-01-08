@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        /*css for the html body element*/
+        * {
+            padding: 0;
+            margin: 0;
+            background-color: black;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: auto;
+        }
+
+        header {
+            width: 100%;
+            border-bottom: 16px solid #CFB53B;
+
+        }
+
+        #background_title {
+            background-color: black;
+            color: white;
+            text-align: center;
+            height: 120px;
+        }
+
+        header h1 {
+            padding-top: 40px;
+            font-weight: normal;
+        }
+
+        #index_css {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding-top: 20px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        li {
+            display: inline-block;
+            height: 420px;
+            padding: 80px;
+        }
+
+        li a {
+            background-color: white;
+            height: 420px;
+            padding: 90px;
+            text-decoration: none;
+            color: black;
+            border: 4px solid #CFB53B;
+        }
+
+        #index_css h1 {
+            padding: 20px;
+            margin-bottom: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--create header for the page-->
+    <header>
+        <div id="background_title">
+            <h1>Create your list of favorite series</h1>
+        </div>
+
+    </header>
+    <div id="index_css">
+        <!--directory option for either add a file or go to the list of book-->
+        <h1>Choose an option</h1>
+        <ul>
+            <li> <a href="AddOrUpdate.html">Add/Update Series</a></li>
+            <li> <a href="/cgi-bin/Read_Serie.py">List Series</a></li>
+            <li> <a href="Delete.html">Delete series</a></li>
+           
+        </ul>
+
+
+
+    </div>
+</body>
+
+</html>

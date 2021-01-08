@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <style>
+        /*create some css for the element in the html body*/
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        #background_title {
+            background-color: black;
+            color: white;
+            text-align: center;
+            height: 120px;
+        }
+
+        header h1 {
+            padding-top: 40px;
+            font-weight: normal;
+        }
+
+        nav {
+            text-align: right;
+            background-color: #CFB53B;
+            padding-bottom: 10px;
+            height: 25px;
+            padding-top: 10px;
+        }
+
+        nav li {
+
+            display: inline;
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+
+        }
+
+        nav li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            color: rgb(52, 52, 70);
+
+            text-shadow: 1px 1px rgb(100, 100, 100);
+        }
+
+        #form_css {
+            background-color: black;
+            color: white;
+            text-align: center;
+            height: 100vh;
+        }
+
+        form {
+            margin: auto;
+            width: 500px;
+            padding: 20px;
+            background-color: white;
+            border-color: #CFB53B;
+            border-style: solid;
+            color: black;
+            font-size: 17px;
+        }
+
+        form .label_checkbox {
+            display: inline-block;
+            width: 95px;
+            text-align: left;
+        }
+
+        form .display_change {
+            display: inline-block;
+            width: 180px;
+            text-align: left;
+        }
+
+        form .display_change_stats {
+            display: inline-block;
+            width: 138px;
+            text-align: left;
+        }
+
+        form input {
+            margin: 7px;
+
+        }
+
+        form input[type=radio] {
+            width: 10px;
+        }
+
+        .display_change_genre {
+            display: inline-block;
+            width: 355px;
+            text-align: left;
+        }
+
+        #form_css h1 {
+            font-size: 24px;
+            padding: 15px;
+            font-weight: normal;
+        }
+
+        input[type=submit] {
+            padding: 8px;
+            background-color: black;
+            color: white;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+
+        input[type=submit]:hover {
+            color: grey;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--header for the nav and the main banner-->
+    <header>
+        <div id="background_title">
+            <h1>Create your list of favorite series</h1>
+        </div>
+        <!--Navigation between the pages-->
+        <nav>
+            <ul>
+                <li> <a href="Index.html">Index</a></li>
+                <li> <a href="AddOrUpdate.html">Add/Update Series</a></li>
+                <li> <a href="/cgi-bin/Read_Serie.py">List Series</a></li>
+                <li> <a href="Delete.html">Delete series</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="form_css">
+        <!--Title-->
+        <h1>Delete Series By ID Number</h1>
+        <!--Create a form to gather the data that will be sent to the python file and then put in a text file-->
+        <form action="/cgi-bin/Delete_Serie.py" method="POST">
+            <label class="display_change">Enter ID:</label><input type="text" name="id_delete">
+            <br />
+            <input type="submit" value="Delete" />
+        </form>
+    </div>
+</body>
+
+</html>
